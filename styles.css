@@ -134,9 +134,7 @@ table {
     font-size: 20px;
     margin-left: 100px;
     margin-right: 100px;
-    /* grid-template-columns: 1fr 1fr; */
     column-width: 700px;
-    /* text-align: ; */
 }
 
 table th,
