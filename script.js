@@ -12,6 +12,7 @@ let comment3 = {
     comment: "'A life-changing experience!'",
 }
 let comments = [comment1, comment2, comment3]
+// this is a useless comment
 let i = 0
 function init() {
     setInterval(commentChange, 10000)
