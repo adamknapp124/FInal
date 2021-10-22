@@ -466,7 +466,7 @@ button:hover {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 400px;
-    height: 410px;
+    height: 380px;
     background: white;
     border-radius: 15px;
     border: solid 2px black;
@@ -747,7 +747,7 @@ table.game {
     width: 100px;
     background-color: rgb(221, 165, 109);
     margin: auto;
-    margin-top: 6px;
+    margin-top: 12px;
     padding-top: 14px;
     text-align: center;
     font-weight: bold;
