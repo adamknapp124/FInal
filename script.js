@@ -239,13 +239,17 @@ function gameMenuStart() {
     var operator = document.getElementById("chooseOp")
     var startGame = document.getElementById("mathFacts")
     var choice = document.getElementById("operation").value
-    operator.style.display = "none"
-    startGame.style.display = "block"
-    document.getElementById("property").innerHTML = choice
-    probGenerator()
-    startTimer()
-    setClockInterval()
-    document.getElementById("answerBox").focus()
+    if (choice == "0") {
+        youMustChoose()
+    } else {
+        operator.style.display = "none"
+        startGame.style.display = "block"
+        document.getElementById("property").innerHTML = choice
+        probGenerator()
+        startTimer()
+        setClockInterval()
+        document.getElementById("answerBox").focus()
+    }
 }
 
 function showGame() {
@@ -311,6 +315,7 @@ function probGenerator() {
     let subObject = subQuest[addIncriment]
     let divObject = divQuest[addIncriment]
     let mulObject = mulQuest[addIncriment]
+    let noChoice = document.getElementById("noChoice")
     let quest = document.getElementById("question")
     var choice = document.getElementById("operation").value
 
@@ -323,6 +328,11 @@ function probGenerator() {
     } else if (choice == "Multiplication") {
         quest.innerHTML = mulObject.mulProb
     }
+}
+
+function youMustChoose() {
+    window.alert("You must choose a property")
+    resetDropdown()
 }
 
 function putNumIn(someNum) {
@@ -346,7 +356,6 @@ function checkAnswer() {
     var currentValue = answerBox.value
     var answerBeingChecked = currentValue
     var operator = document.getElementById("operation").value
-    // var choice = document.getElementById("operation")
 
     if (answerBeingChecked == addQuest[addIncriment].answer && operator == "Addition") {
         scoreKeeper()
@@ -384,9 +393,6 @@ window.addEventListener("keydown", kbSubmit, false)
 var scoreBase = 0
 
 function scoreKeeper() {
-    // var startGame = document.getElementById("mathFacts")
-    // var showScore = document.getElementById("showScore")
-    // var operator = document.getElementById("chooseOp")
     let score = document.getElementById("score")
     scoreBase++
     score.innerHTML = "Score: " + scoreBase
@@ -397,8 +403,6 @@ function scoreKeeper() {
 
 function viewScore() {
     var startGame = document.getElementById("mathFacts")
-    // var showScore = document.getElementById("showScore")
-    // var operator = document.getElementById("chooseOp")
     let result = document.getElementById("result")
     result.innerHTML = scoreBase
     startGame.style.display = "none"
