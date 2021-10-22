@@ -14,40 +14,86 @@
     </head>
     <body>
         <nav>
-            <p>
-                <a href="C:\Users\aknap\Desktop\FInal\index.html"
-                    >⅃ƎAЯИ2PLAY&trade;</a
-                >
-            </p>
-            <ul>
-                <li>
-                    <a href="C:\Users\aknap\Desktop\FInal\index.html">Home</a>
-                </li>
-                <li>
-                    <a href="#">Games</a>
-                    <ul>
-                        <li>
-                            <a
-                                href="C:\Users\aknap\Desktop\FInal\Games\anagram-hunt.html"
-                                >Anagram Hunt</a
-                            >
-                        </li>
-                        <li>
-                            <a
-                                href="C:\Users\aknap\Desktop\FInal\Games\math-facts.html"
-                                >Math Facts Practice</a
-                            >
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="C:\Users\aknap\Desktop\FInal\about.html">About</a>
-                </li>
-                <li>
-                    <a href="C:\Users\aknap\Desktop\FInal\login.html">Login</a>
-                </li>
-            </ul>
+            <p><a href="C:\Users\aknap\Desktop\FInal\index.html">⅃ƎAЯИ2PLAY&trade;</a></p>
+            <ul><li>
+                <a href="C:\Users\aknap\Desktop\FInal\index.html">Home</a>
+            </li><li>
+                <a href="#">Games &#x25BE;</a>
+            <ul><li>
+                <a href="C:\Users\aknap\Desktop\FInal\Games\anagram-hunt.html">Anagram Hunt</a>
+            </li><li>
+                <a href="C:\Users\aknap\Desktop\FInal\Games\math-facts.html">Math Facts Practice</a>
+            </li></ul>
+            </li><li>
+                <a href="C:\Users\aknap\Desktop\FInal\about.html">About</a>
+            </li><li>
+                <a href="C:\Users\aknap\Desktop\FInal\login.html">Login</a>
+            </li></ul>
         </nav>
+        <div id="chooseOp">
+            <h1>Math Facts Practice</h1>
+            <div id="op_field">
+                <label for="operation">Operation:</label>
+                    <select name="operation" id="operation">
+                        <option value="0">--Choose an operation--</option>
+                        <option value="Addition">Addition</option>
+                        <option value="Subtraction">Subtraction</option>
+                        <option value="Division">Division</option>
+                        <option value="Multiplication">Multiplication</option>
+                    </select>
+                </label>
+            </div>
+            <ol id="gameRules">
+                <li>Choose an operation</li>
+                <li>Press Start</li>
+                <li>Answer as many as you can in 30 seconds!</li>
+                <li>Your time will begin after you submit your first answer</li>
+            </ol>
+            <div id="start" onclick="gameMenuStart()">Start!</div>
+        </div>
+        <div id="mathFacts">
+        <div id="gameTitle">Math Facts Practice</div>
+        <div id="property"></div>
+        <div id="question"></div>
+        <input type="text" id="answerBox"></input>
+        <form name="calculator">
+            <table class="game">
+                <div><tr>
+                    <td><input type="button" id="one" value="1" onclick="putNumIn(1)"></td>
+                    <td><input type="button" id="two" value="2" onclick="putNumIn(2)"></td>
+                    <td><input type="button" id="three" value="3" onclick="putNumIn(3)"></td>
+                </tr></div>
+                <div><tr>
+                    <td><input type="button" id="four" value="4" onclick="putNumIn(4)"></td>
+                    <td><input type="button" id="five" value="5" onclick="putNumIn(5)"></td>
+                    <td><input type="button" id="six" value="6" onclick="putNumIn(6)"></td>
+                </tr></div>
+                <div><tr>
+                    <td><input type="button" id="seven" value="7" onclick="putNumIn(7)"></td>
+                    <td><input type="button" id="eight" value="8" onclick="putNumIn(8)"></td>
+                    <td><input type="button" id="nine" value="9" onclick="putNumIn(9)"></td>
+                </tr></div>
+                <div><tr>                
+                    <td><input type="button" id="zero" value="0" onclick="putNumIn(0)"></td>
+                    <td colspan=2><input type="button" id="reset" value="Reset" onclick="resetAnswerBox()"></td>
+                </tr></div>
+                <tr>
+                    <td colspan=3><input type="button" id="enter" value="Enter" onclick="checkAnswer()"></div></td>
+                </tr>
+            </table>
+            <div id="score">Score:</div>
+            <div id="timeLeft"></div>
+            <div id="tryAgain" onclick="showGame()">Try again?</div>
+        </form></div>
+        </div>
+        <div id="scorePage">
+            <h1>You are finished!</h1>
+            <div id="tyfp">Thank you for playing<br>Math Facts Practice</div>
+            <div id="property"></div>
+            <div id ="scoreStatement">Your final score is:</div>
+            <div id ="result"></div>
+            <div id="newVer" onclick="newGame()">Try a different version?</div>
+        </div>
     </body>
     <footer>
         <div id="cr">&copy; 2021 ⅃ƎAЯИ2PLAY</div>
@@ -55,7 +101,7 @@
             <a href="http://www.facebook.com" class="fa fa-facebook"></a>
             <a href="http://www.twitter.com" class="fa fa-twitter"></a>
             <a href="http://www.instagram.com" class="fa fa-instagram"></a>
-            <i class="fa fa-envelope"></i>
+            <a href="C:\Users\aknap\Desktop\FInal\contact-us.html" i class ="fa fa-envelope"></a></i>
         </div>
     </footer>
 </html>

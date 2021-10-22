@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="script.js"></script>
         <link rel="stylesheet" href="styles.css" />
         <link
             rel="stylesheet"
@@ -17,19 +18,13 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li>
-                    <a href="#">Games</a>
+                    <a href="#">Games &#x25BE;</a>
                     <ul>
                         <li>
-                            <a
-                                href="C:\Users\aknap\Desktop\FInal\Games\anagram-hunt.html"
-                                >Anagram Hunt</a
-                            >
+                            <a href="\Games\anagram-hunt.html">Anagram Hunt</a>
                         </li>
                         <li>
-                            <a
-                                href="C:\Users\aknap\Desktop\FInal\Games\math-facts.html"
-                                >Math Facts Practice</a
-                            >
+                            <a href="\Games\math-facts.html">Math Facts Practice</a>
                         </li>
                     </ul>
                 </li>
@@ -37,23 +32,51 @@
                 <li><a href="login.html">Login</a></li>
             </ul>
         </nav>
-        <div class="center">
+        <div id="center">
             <h1>Login</h1>
-            <form method="post">
+            <form id="my-form" method="post">
                 <div class="txt_field">
-                    <input type="text" required />
+                    <input id="username" type="text" autocomplete="off" required />
                     <label>Username</label>
                 </div>
                 <div class="txt_field">
-                    <input type="password" required />
+                    <input id="password" type="password" autocomplete="off" required />
                     <span></span>
                     <label>Password</label>
                 </div>
-                <div class="pass">Forgot Password?</div>
-                <input type="submit" value="Login" />
+                <input type="submit" value="Login" onclick="validateLogin()" />
                 <span></span>
                 <div class="signup_link">
-                    Not a member? <a href="#">Sign up now</a>
+                    <button onclick="loginHide()">Need an account? Register</button>
+                </div>
+            </form>
+        </div>
+        <div id="center2">
+            <h1>Register</h1>
+            <form id="my-form2" method="post">
+                <div class="txt_field">
+                    <input id="email" type="emailfield" name="emailfield" autocomplete="off" required />
+                    <label>Email</label>
+                </div>
+                <div class="txt_field">
+                    <input id="passCreate" type="password" autocomplete="off" required />
+                    <span></span>
+                    <label>Password</label>
+                </div>
+                <div class="txt_field">
+                    <input id="passCreate2" type="password" autocomplete="off" required />
+                    <span></span>
+                    <label>Repeat Password</label>
+                </div>
+                <div class="pass">
+                    <input id="box" type="checkbox" required name="agreement" id="agreement" />
+                    I am old enough to play!
+                </div>
+                <button><input type="submit" value="Register" onclick="validateRegister()" /></button>
+                <br />
+                <span></span>
+                <div class="signup_link">
+                    <button onclick="registerHide()">Have an account? Login!</button>
                 </div>
             </form>
         </div>
@@ -64,7 +87,7 @@
             <a href="http://www.facebook.com" class="fa fa-facebook"></a>
             <a href="http://www.twitter.com" class="fa fa-twitter"></a>
             <a href="http://www.instagram.com" class="fa fa-instagram"></a>
-            <i class="fa fa-envelope"></i>
+            <a href="\contact-us.html" i class ="fa fa-envelope"></a></i>
         </div>
     </footer>
 </html>
